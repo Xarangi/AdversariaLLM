@@ -72,8 +72,9 @@ The framework supports various adversarial attack algorithms:
 - **Random Search** - Baseline random optimization
 - **Human Jailbreaks** - Curated human-written prompts
 - **Direct** - Direct prompt testing without optimization
-- **BEAST** - Gradient-based discrete optimization
+- **BEAST** - Gradient-free discrete optimization
 - **Best-of-N** - Jailbreaking with simple string perturbations
+- **Inpainting** - Diffusion-based inpainting attacks (Implemented as transfer attacks)
 
 
 ## 📊 Evaluation and Judging
