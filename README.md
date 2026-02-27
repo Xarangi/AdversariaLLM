@@ -14,6 +14,34 @@ git clone https://github.com/LLM-QC/AdversariaLLM
 cd AdversariaLLM
 ```
 
+This repository supports two setup paths:
+
+### Option A: Pixi (recommended)
+
+Pixi installs the environment and the local `adversariallm` package (editable) from `pyproject.toml`.
+
+```bash
+pixi install --locked
+```
+
+Run commands either with `pixi run ...`:
+
+```bash
+pixi run python run_attacks.py --help
+pixi run pytest -q tests/test_attacks/test_direct.py
+```
+
+or activate the environment first:
+
+```bash
+pixi shell
+python run_attacks.py --help
+```
+
+### Option B: Classic pip / virtualenv / conda workflow
+
+Use this if you prefer a traditional Python environment.
+
 2. Install dependencies:
 ```bash
 pip install -r requirements.txt
