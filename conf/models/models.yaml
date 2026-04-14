@@ -124,6 +124,15 @@ allenai/Llama-3.1-Tulu-3-8B-DPO:
   dtype: bfloat16
   chat_template: null
   trust_remote_code: True
+olmo3-7b-instruct-local:
+  id: /network/scratch/s/sarangis/hf-cache/hub/models--allenai--OLMo-3-7B-Instruct/snapshots/096bb5469fe34348bc88d851a69edb3bf6f40df4
+  tokenizer_id: /network/scratch/s/sarangis/hf-cache/hub/models--allenai--OLMo-3-7B-Instruct/snapshots/096bb5469fe34348bc88d851a69edb3bf6f40df4
+  short_name: OLMo
+  developer_name: AllenAI
+  compile: False
+  dtype: bfloat16
+  chat_template: null
+  trust_remote_code: True
 mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated:
   id: mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated
   tokenizer_id: meta-llama/Meta-Llama-3.1-8B-Instruct
@@ -328,6 +337,33 @@ Qwen/Qwen2.5-0.5B-Instruct:
   tokenizer_id: Qwen/Qwen2.5-0.5B-Instruct
   short_name: Qwen2.5
   developer_name: Qwen
+  compile: False
+  dtype: bfloat16
+  chat_template: null
+  trust_remote_code: True
+qwen3-4b-instruct-2507-local:
+  id: /network/scratch/s/sarangis/hf-cache/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554
+  tokenizer_id: /network/scratch/s/sarangis/hf-cache/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554
+  short_name: Qwen3
+  developer_name: Qwen
+  compile: False
+  dtype: bfloat16
+  chat_template: null
+  trust_remote_code: True
+tvergara/smollm3-safety-pair-safe:
+  id: /network/scratch/s/sarangis/hf-cache/hub/models--tvergara--smollm3-safety-pair-safe/snapshots/b545184189f8e3aebb6806b9653c7e284357faa8
+  tokenizer_id: /network/scratch/s/sarangis/hf-cache/hub/models--tvergara--smollm3-safety-pair-safe/snapshots/b545184189f8e3aebb6806b9653c7e284357faa8
+  short_name: SmolLM3
+  developer_name: tvergara
+  compile: False
+  dtype: bfloat16
+  chat_template: null
+  trust_remote_code: True
+tvergara/smollm3-safety-pair-unsafe:
+  id: /network/scratch/s/sarangis/hf-cache/hub/models--tvergara--smollm3-safety-pair-unsafe/snapshots/b52fcb11c956ba0c1922b0dcb16f2cae81d278c5
+  tokenizer_id: /network/scratch/s/sarangis/hf-cache/hub/models--tvergara--smollm3-safety-pair-unsafe/snapshots/b52fcb11c956ba0c1922b0dcb16f2cae81d278c5
+  short_name: SmolLM3
+  developer_name: tvergara
   compile: False
   dtype: bfloat16
   chat_template: null

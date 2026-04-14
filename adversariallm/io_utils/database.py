@@ -26,15 +26,29 @@ def get_mongodb_connection() -> Database:
     user = os.environ.get("MONGODB_USER")
     password = os.environ.get("MONGODB_PASSWORD")
     host = os.environ.get("MONGODB_HOST")
-    mongo_uri = os.environ.get("MONGODB_URI", f"mongodb://{user}:{password}@{host}?authSource={user}")
+    mongo_uri = os.environ.get("MONGODB_URI")
+    if mongo_uri is None:
+        if user and password and host:
+            mongo_uri = f"mongodb://{user}:{password}@{host}?authSource={user}"
+        else:
+            raise RuntimeError(
+                "MongoDB environment is not configured. "
+                "Set MONGODB_URI or MONGODB_USER/MONGODB_PASSWORD/MONGODB_HOST."
+            )
     client = MongoClient(mongo_uri)
     db_name = os.environ.get("MONGODB_DB", user)
+    if not db_name:
+        raise RuntimeError("MONGODB_DB is not set and cannot be inferred from MONGODB_USER.")
     return client[db_name]
 
 
 def log_config_to_db(run_config, result, log_file):
-    db = get_mongodb_connection()
-    collection = db.runs
+    try:
+        db = get_mongodb_connection()
+        collection = db.runs
+    except Exception as e:
+        print(f"Warning: skipping MongoDB logging for {log_file}: {e}")
+        return
 
     idx = run_config.dataset_params.idx
     if idx is None:

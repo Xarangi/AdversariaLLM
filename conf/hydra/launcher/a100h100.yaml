@@ -11,7 +11,12 @@ exclude: null
 signal_delay_s: 60
 max_num_timeout: 0
 additional_parameters: {}
-setup: []
+setup:
+  - export MONGODB_URI="$(printenv MONGODB_URI)"
+  - export MONGODB_USER="$(printenv MONGODB_USER)"
+  - export MONGODB_PASSWORD="$(printenv MONGODB_PASSWORD)"
+  - export MONGODB_HOST="$(printenv MONGODB_HOST)"
+  - export MONGODB_DB="$(printenv MONGODB_DB)"
 gres: gpu:1
 mem_gb: 64
 cpus_per_task: 4

@@ -73,6 +73,14 @@ class PGDAttack(Attack):
         self.zero_init_attack = False  # Consider making this a config option if needed
 
     def run(self, model: PreTrainedModel, tokenizer, dataset) -> AttackResult:
+        if hasattr(model.config, "use_cache"):
+            model.config.use_cache = False
+        if hasattr(model, "gradient_checkpointing_enable"):
+            try:
+                model.gradient_checkpointing_enable()
+                logging.info("Enabled gradient checkpointing for PGD to reduce memory use")
+            except Exception:
+                logging.warning("Could not enable gradient checkpointing for PGD")
         self._initialize_embedding_scale(model)
         original_model = self._maybe_load_original_model()
 
@@ -249,7 +257,7 @@ class PGDAttack(Attack):
             outputs = model(
                 inputs_embeds=perturbed_embeddings,
                 attention_mask=attention_mask_batch,
-                output_hidden_states=True
+                output_hidden_states=self.config.tie_features > 0
             )
 
             loss = self._calculate_loss(outputs.logits, y_batch, target_masks_batch, tokenizer)
@@ -490,7 +498,7 @@ class PGDAttack(Attack):
              original_outputs = original_model(
                  inputs_embeds=perturbed_embeddings.detach(),
                  attention_mask=attention_mask,
-                 output_hidden_states=True
+                 output_hidden_states=self.config.tie_features > 0
              )
 
         if self.config.tie_logits > 0:

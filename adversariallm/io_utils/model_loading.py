@@ -19,6 +19,7 @@ from transformers import (
     BitsAndBytesConfig,
     PreTrainedModel,
     PreTrainedTokenizerBase,
+    PreTrainedTokenizerFast,
 )
 from transformers.utils.logging import disable_progress_bar
 
@@ -99,12 +100,34 @@ def load_model_and_tokenizer(
 
     model.config.short_name = model_params.short_name
     model.config.developer_name = model_params.developer_name
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_params.tokenizer_id,
-        trust_remote_code=model_params.trust_remote_code,
-        truncation_side="left",
-        padding_side="left",
-    )
+    tokenizer_load_kwargs = {
+        "trust_remote_code": model_params.trust_remote_code,
+        "truncation_side": "left",
+        "padding_side": "left",
+    }
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_params.tokenizer_id,
+            **tokenizer_load_kwargs,
+        )
+    except ValueError as exc:
+        error_msg = str(exc)
+        if (
+            "Tokenizer class" in error_msg
+            and "does not exist or is not currently imported" in error_msg
+        ):
+            logging.warning(
+                "Falling back to PreTrainedTokenizerFast for %s due to unsupported tokenizer metadata: %s",
+                model_params.tokenizer_id,
+                error_msg,
+            )
+            tokenizer = PreTrainedTokenizerFast.from_pretrained(
+                model_params.tokenizer_id,
+                truncation_side="left",
+                padding_side="left",
+            )
+        else:
+            raise
     # Model-specific tokenizer fixes
     match model_params.tokenizer_id.lower():
         case path if "oasst-sft-6-llama-30b" in path:
@@ -142,6 +165,10 @@ def load_model_and_tokenizer(
             tokenizer.model_max_length = 8192
         case path if "gemma-3" in path:
             # true ctx is 128k but we don't have that much memory
+            tokenizer.model_max_length = 32768
+        case path if "qwen3" in path:
+            # Some Qwen3 tokenizers advertise a very large max length (1M+),
+            # which is not practical for these attack runs.
             tokenizer.model_max_length = 32768
         case path if "zephyr" in path:
             tokenizer.model_max_length = 32768

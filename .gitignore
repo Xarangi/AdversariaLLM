@@ -1,4 +1,6 @@
 outputs/
+slurm-*.out
+slurm-*.err
 *.pyc
 __pycache__
 multirun/
@@ -12,3 +14,6 @@ cache
 viz
 wandb
 embeddings/
+
+# ignore local mongo binaries
+local/mongodb/

@@ -22,8 +22,12 @@ class RunConfig:
 
 
 def filter_config(run_config: RunConfig, dset_len: int, overwrite: bool = False) -> RunConfig | None:
-    db = get_mongodb_connection()
-    collection = db.runs
+    collection = None
+    try:
+        db = get_mongodb_connection()
+        collection = db.runs
+    except Exception as e:
+        print(f"Warning: MongoDB unavailable, skipping duplicate filtering: {e}")
 
     OmegaConf.resolve(run_config.attack_params)
     OmegaConf.resolve(run_config.dataset_params)
@@ -41,9 +45,14 @@ def filter_config(run_config: RunConfig, dset_len: int, overwrite: bool = False)
     for i in idx:
         run_config.dataset_params.idx = i
         config_data = OmegaConf.to_container(OmegaConf.structured(run_config), resolve=True)
-        if not overwrite and collection.find_one({"config": config_data}):
-            print(f"Skipping {run_config.model} {run_config.dataset} {run_config.attack} idx={i} because it already exists at {collection.find_one({'config': config_data})['log_file']}")
-            continue
+        if collection is not None and not overwrite:
+            existing = collection.find_one({"config": config_data})
+            if existing:
+                print(
+                    f"Skipping {run_config.model} {run_config.dataset} {run_config.attack} idx={i} "
+                    f"because it already exists at {existing['log_file']}"
+                )
+                continue
         filtered_idx.append(i)
 
     if not filtered_idx:
