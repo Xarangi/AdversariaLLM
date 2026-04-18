@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=autodan-smollm3-safety-pair-safe
 #SBATCH --partition=long
-#SBATCH --gres=gpu:l40s:1
-#SBATCH --exclude=cn-a[001-011],cn-c[002-014,016-019,021-034,036-040]
+#SBATCH --gres=gpu:1
+#SBATCH --exclude=cn-a[001-011],cn-b[001-005],cn-c[002-014,016-019,021-034,036-040],cn-e00[2-3]
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=32G
 #SBATCH --time=7-00:00:00

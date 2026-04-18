@@ -1,0 +1,612 @@
+[
+  {
+    "model": "Qwen3-4B",
+    "method": "Baseline",
+    "attack": null,
+    "bits": 0.0,
+    "asr": 0.10185185185185185,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "Roleplay",
+    "attack": null,
+    "bits": 213.0,
+    "asr": 0.06,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "FT (n=10)",
+    "attack": null,
+    "bits": 11120.0,
+    "asr": 0.58,
+    "completed_instances": 10,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "FT (n=50)",
+    "attack": null,
+    "bits": 44438.0,
+    "asr": 0.795,
+    "completed_instances": 50,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "FT (n=100)",
+    "attack": null,
+    "bits": 85310.0,
+    "asr": 0.9,
+    "completed_instances": 100,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "FT (n=100)",
+    "attack": null,
+    "bits": 85311.0,
+    "asr": 0.8055555555555556,
+    "completed_instances": 100,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "GCG",
+    "attack": "gcg",
+    "bits": 156720,
+    "asr": 0.5973597359735974,
+    "completed_instances": 303,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-12/scoring/asr_gcg_strong_reject.json"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "FT (n=250)",
+    "attack": null,
+    "bits": 203651.0,
+    "asr": 0.855,
+    "completed_instances": 250,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "FT (n=250)",
+    "attack": null,
+    "bits": 203683.0,
+    "asr": 0.8055555555555556,
+    "completed_instances": 250,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "AutoDAN",
+    "attack": "autodan",
+    "bits": 206774,
+    "asr": 0.39464882943143814,
+    "completed_instances": 299,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-12/scoring/asr_autodan_strong_reject.json"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "FT (n=all)",
+    "attack": null,
+    "bits": 426229.0,
+    "asr": 0.895,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "PGD",
+    "attack": "pgd",
+    "bits": 1578136,
+    "asr": 0.5769230769230769,
+    "completed_instances": 130,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-12/scoring/asr_pgd_strong_reject.json"
+  },
+  {
+    "model": "Qwen3-4B",
+    "method": "PAIR",
+    "attack": "pair",
+    "bits": 208000789260,
+    "asr": 0.49823321554770317,
+    "completed_instances": 283,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-12/scoring/asr_pair_strong_reject.json"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "Baseline",
+    "attack": null,
+    "bits": 0.0,
+    "asr": 0.018518518518518517,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "Roleplay",
+    "attack": null,
+    "bits": 246.0,
+    "asr": 0.0787037037037037,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "FT (n=10)",
+    "attack": null,
+    "bits": 13004.0,
+    "asr": 0.023148148148148147,
+    "completed_instances": 10,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "FT (n=50)",
+    "attack": null,
+    "bits": 46271.0,
+    "asr": 0.855,
+    "completed_instances": 50,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "FT (n=50)",
+    "attack": null,
+    "bits": 46277.0,
+    "asr": 0.8055555555555556,
+    "completed_instances": 50,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "FT (n=100)",
+    "attack": null,
+    "bits": 79698.0,
+    "asr": 0.91,
+    "completed_instances": 100,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "FT (n=100)",
+    "attack": null,
+    "bits": 79717.0,
+    "asr": 0.8287037037037037,
+    "completed_instances": 100,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "GCG",
+    "attack": "gcg",
+    "bits": 156720,
+    "asr": 0.889261744966443,
+    "completed_instances": 298,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-13/scoring/asr_gcg_strong_reject.json"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "FT (n=250)",
+    "attack": null,
+    "bits": 175157.0,
+    "asr": 0.885,
+    "completed_instances": 250,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "AutoDAN",
+    "attack": "autodan",
+    "bits": 206774,
+    "asr": 0.75,
+    "completed_instances": 220,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-13/scoring/asr_autodan_strong_reject.json"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "FT (n=all)",
+    "attack": null,
+    "bits": 335455.0,
+    "asr": 0.935,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "PGD",
+    "attack": "pgd",
+    "bits": 1578136,
+    "asr": 0.8472222222222222,
+    "completed_instances": 72,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-14/scoring/asr_pgd_strong_reject.json"
+  },
+  {
+    "model": "OLMo-3-7B-Instruct",
+    "method": "PAIR",
+    "attack": "pair",
+    "bits": 208000789260,
+    "asr": 0.7307692307692307,
+    "completed_instances": 286,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-13/scoring/asr_pair_strong_reject.json"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "Baseline",
+    "attack": null,
+    "bits": 0.0,
+    "asr": 0.055,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "Roleplay",
+    "attack": null,
+    "bits": 216.0,
+    "asr": 0.018518518518518517,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "FT (n=10)",
+    "attack": null,
+    "bits": 9158.0,
+    "asr": 0.06,
+    "completed_instances": 10,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "FT (n=50)",
+    "attack": null,
+    "bits": 44020.0,
+    "asr": 0.06,
+    "completed_instances": 50,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "FT (n=100)",
+    "attack": null,
+    "bits": 88417.0,
+    "asr": 0.06,
+    "completed_instances": 100,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "GCG",
+    "attack": "gcg",
+    "bits": 156720,
+    "asr": 0.7345454545454545,
+    "completed_instances": 275,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-13/scoring/asr_gcg_strong_reject.json"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "AutoDAN",
+    "attack": "autodan",
+    "bits": 206774,
+    "asr": 0.723404255319149,
+    "completed_instances": 141,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-13/scoring/asr_autodan_strong_reject.json"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "FT (n=250)",
+    "attack": null,
+    "bits": 220006.0,
+    "asr": 0.06,
+    "completed_instances": 250,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "FT (n=all)",
+    "attack": null,
+    "bits": 459655.0,
+    "asr": 0.06,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "PGD",
+    "attack": "pgd",
+    "bits": 1578136,
+    "asr": 0.9465875370919882,
+    "completed_instances": 337,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-13/scoring/asr_pgd_strong_reject.json"
+  },
+  {
+    "model": "Llama-3-8B-Instruct",
+    "method": "PAIR",
+    "attack": "pair",
+    "bits": 208000789260,
+    "asr": 0.6751592356687898,
+    "completed_instances": 157,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-13/scoring/asr_pair_strong_reject.json"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "Baseline",
+    "attack": null,
+    "bits": 0.0,
+    "asr": 0.0787037037037037,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "Roleplay",
+    "attack": null,
+    "bits": 233.0,
+    "asr": 0.055,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "FT (n=10)",
+    "attack": null,
+    "bits": 6718.0,
+    "asr": 0.855,
+    "completed_instances": 10,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "FT (n=10)",
+    "attack": null,
+    "bits": 6743.0,
+    "asr": 0.7916666666666666,
+    "completed_instances": 10,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "FT (n=50)",
+    "attack": null,
+    "bits": 32843.0,
+    "asr": 0.895,
+    "completed_instances": 50,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "FT (n=50)",
+    "attack": null,
+    "bits": 34629.0,
+    "asr": 0.8055555555555556,
+    "completed_instances": 50,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "FT (n=100)",
+    "attack": null,
+    "bits": 79578.0,
+    "asr": 0.845,
+    "completed_instances": 100,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "GCG",
+    "attack": "gcg",
+    "bits": 156720,
+    "asr": 0.8829787234042553,
+    "completed_instances": 94,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-14/scoring/asr_gcg_strong_reject.json"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "FT (n=250)",
+    "attack": null,
+    "bits": 182935.0,
+    "asr": 0.91,
+    "completed_instances": 250,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "AutoDAN",
+    "attack": "autodan",
+    "bits": 206774,
+    "asr": 0.58,
+    "completed_instances": 100,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-14/scoring/asr_autodan_strong_reject.json"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "FT (n=all)",
+    "attack": null,
+    "bits": 374981.0,
+    "asr": 0.89,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "PGD",
+    "attack": "pgd",
+    "bits": 1578136,
+    "asr": 0.96,
+    "completed_instances": 50,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-14/scoring/asr_pgd_strong_reject.json"
+  },
+  {
+    "model": "SmolLM3-Safe",
+    "method": "PAIR",
+    "attack": "pair",
+    "bits": 208000789260,
+    "asr": 0.9649122807017544,
+    "completed_instances": 57,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-14/scoring/asr_pair_strong_reject.json"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "Baseline",
+    "attack": null,
+    "bits": 0.0,
+    "asr": 0.7175925925925926,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "Roleplay",
+    "attack": null,
+    "bits": 227.0,
+    "asr": 0.6759259259259259,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "FT (n=10)",
+    "attack": null,
+    "bits": 5905.0,
+    "asr": 0.7546296296296297,
+    "completed_instances": 10,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "FT (n=50)",
+    "attack": null,
+    "bits": 25005.0,
+    "asr": 0.84,
+    "completed_instances": 50,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "FT (n=100)",
+    "attack": null,
+    "bits": 49065.0,
+    "asr": 0.87,
+    "completed_instances": 100,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "FT (n=250)",
+    "attack": null,
+    "bits": 120154.0,
+    "asr": 0.8842592592592593,
+    "completed_instances": 250,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "GCG",
+    "attack": "gcg",
+    "bits": 156720,
+    "asr": 0.8421052631578947,
+    "completed_instances": 95,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-14/scoring/asr_gcg_strong_reject.json"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "AutoDAN",
+    "attack": "autodan",
+    "bits": 206774,
+    "asr": 0.7457627118644068,
+    "completed_instances": 59,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-14/scoring/asr_autodan_strong_reject.json"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "FT (n=all)",
+    "attack": null,
+    "bits": 252066.0,
+    "asr": 0.915,
+    "completed_instances": 1000000000,
+    "source": "training",
+    "source_file": "/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "PGD",
+    "attack": "pgd",
+    "bits": 1578136,
+    "asr": 0.94,
+    "completed_instances": 50,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-14/scoring/asr_pgd_strong_reject.json"
+  },
+  {
+    "model": "SmolLM3-Unsafe",
+    "method": "PAIR",
+    "attack": "pair",
+    "bits": 208000789260,
+    "asr": 0.9787234042553191,
+    "completed_instances": 47,
+    "source": "adversarial",
+    "source_file": "outputs/2026-04-14/scoring/asr_pair_strong_reject.json"
+  }
+]

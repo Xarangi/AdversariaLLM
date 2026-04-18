@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=pair-smollm3-safety-pair-unsafe
+#SBATCH --job-name=crescendo-smollm3-safety-pair-unsafe
 #SBATCH --partition=long
 #SBATCH --gres=gpu:1
 #SBATCH --exclude=cn-a[001-011],cn-b[001-005],cn-c[002-014,016-019,021-034,036-040],cn-e00[2-3]
@@ -7,8 +7,8 @@
 #SBATCH --mem=32G
 #SBATCH --time=7-00:00:00
 #SBATCH --array=0-99
-#SBATCH --output=/home/mila/s/sarangis/AdversariaLLM/slurm-pair-smollm3-safety-pair-unsafe-%A_%a.out
-#SBATCH --error=/home/mila/s/sarangis/AdversariaLLM/slurm-pair-smollm3-safety-pair-unsafe-%A_%a.err
+#SBATCH --output=/home/mila/s/sarangis/AdversariaLLM/slurm-crescendo-smollm3-safety-pair-unsafe-%A_%a.out
+#SBATCH --error=/home/mila/s/sarangis/AdversariaLLM/slurm-crescendo-smollm3-safety-pair-unsafe-%A_%a.err
 
 set -euo pipefail
 
@@ -19,7 +19,7 @@ export TRANSFORMERS_CACHE="${HF_HOME}/hub"
 export PYTHONUNBUFFERED=1
 
 MONGOD_BIN=/home/mila/s/sarangis/AdversariaLLM/local/mongodb/bin/mongod
-MONGO_PORT=$((32017 + SLURM_ARRAY_TASK_ID))
+MONGO_PORT=$((38017 + SLURM_ARRAY_TASK_ID))
 MONGO_DBPATH="/tmp/${USER}/adversariallm-mongo/${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}"
 MONGO_LOGPATH="${MONGO_DBPATH}/mongod.log"
 
@@ -44,5 +44,5 @@ export MONGODB_DB="adversariallm"
   model=tvergara/smollm3-safety-pair-unsafe \
   dataset=adv_behaviors \
   datasets.adv_behaviors.idx=${SLURM_ARRAY_TASK_ID} \
-  attack=pair \
+  attack=crescendo \
   classifiers='[strong_reject]'

@@ -1,0 +1,62 @@
+model,method,attack,source,bits,bits_plot,asr,asr_percent,completed_instances,source_file
+Qwen3-4B,Baseline,,training,0.0,1.0,0.10185185185185185,10.185185185185185,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Qwen3-4B,Roleplay,,training,213.0,213.0,0.06,6.0,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Qwen3-4B,FT (n=10),,training,11120.0,11120.0,0.58,57.99999999999999,10,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Qwen3-4B,FT (n=50),,training,44438.0,44438.0,0.795,79.5,50,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Qwen3-4B,FT (n=100),,training,85310.0,85310.0,0.9,90.0,100,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Qwen3-4B,FT (n=100),,training,85311.0,85311.0,0.8055555555555556,80.55555555555556,100,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Qwen3-4B,GCG,gcg,adversarial,156720,156720.0,0.5973597359735974,59.73597359735974,303,outputs/2026-04-12/scoring/asr_gcg_strong_reject.json
+Qwen3-4B,FT (n=250),,training,203651.0,203651.0,0.855,85.5,250,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Qwen3-4B,FT (n=250),,training,203683.0,203683.0,0.8055555555555556,80.55555555555556,250,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Qwen3-4B,AutoDAN,autodan,adversarial,206774,206774.0,0.39464882943143814,39.46488294314381,299,outputs/2026-04-12/scoring/asr_autodan_strong_reject.json
+Qwen3-4B,FT (n=all),,training,426229.0,426229.0,0.895,89.5,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Qwen3-4B,PGD,pgd,adversarial,1578136,1578136.0,0.5769230769230769,57.692307692307686,130,outputs/2026-04-12/scoring/asr_pgd_strong_reject.json
+Qwen3-4B,PAIR,pair,adversarial,208000789260,208000789260.0,0.49823321554770317,49.82332155477032,283,outputs/2026-04-12/scoring/asr_pair_strong_reject.json
+OLMo-3-7B-Instruct,Baseline,,training,0.0,1.0,0.018518518518518517,1.8518518518518516,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+OLMo-3-7B-Instruct,Roleplay,,training,246.0,246.0,0.0787037037037037,7.87037037037037,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+OLMo-3-7B-Instruct,FT (n=10),,training,13004.0,13004.0,0.023148148148148147,2.314814814814815,10,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+OLMo-3-7B-Instruct,FT (n=50),,training,46271.0,46271.0,0.855,85.5,50,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+OLMo-3-7B-Instruct,FT (n=50),,training,46277.0,46277.0,0.8055555555555556,80.55555555555556,50,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+OLMo-3-7B-Instruct,FT (n=100),,training,79698.0,79698.0,0.91,91.0,100,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+OLMo-3-7B-Instruct,FT (n=100),,training,79717.0,79717.0,0.8287037037037037,82.87037037037037,100,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+OLMo-3-7B-Instruct,GCG,gcg,adversarial,156720,156720.0,0.889261744966443,88.9261744966443,298,outputs/2026-04-13/scoring/asr_gcg_strong_reject.json
+OLMo-3-7B-Instruct,FT (n=250),,training,175157.0,175157.0,0.885,88.5,250,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+OLMo-3-7B-Instruct,AutoDAN,autodan,adversarial,206774,206774.0,0.75,75.0,220,outputs/2026-04-13/scoring/asr_autodan_strong_reject.json
+OLMo-3-7B-Instruct,FT (n=all),,training,335455.0,335455.0,0.935,93.5,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+OLMo-3-7B-Instruct,PGD,pgd,adversarial,1578136,1578136.0,0.8472222222222222,84.72222222222221,72,outputs/2026-04-14/scoring/asr_pgd_strong_reject.json
+OLMo-3-7B-Instruct,PAIR,pair,adversarial,208000789260,208000789260.0,0.7307692307692307,73.07692307692307,286,outputs/2026-04-13/scoring/asr_pair_strong_reject.json
+Llama-3-8B-Instruct,Baseline,,training,0.0,1.0,0.055,5.5,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Llama-3-8B-Instruct,Roleplay,,training,216.0,216.0,0.018518518518518517,1.8518518518518516,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Llama-3-8B-Instruct,FT (n=10),,training,9158.0,9158.0,0.06,6.0,10,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Llama-3-8B-Instruct,FT (n=50),,training,44020.0,44020.0,0.06,6.0,50,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Llama-3-8B-Instruct,FT (n=100),,training,88417.0,88417.0,0.06,6.0,100,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Llama-3-8B-Instruct,GCG,gcg,adversarial,156720,156720.0,0.7345454545454545,73.45454545454545,275,outputs/2026-04-13/scoring/asr_gcg_strong_reject.json
+Llama-3-8B-Instruct,AutoDAN,autodan,adversarial,206774,206774.0,0.723404255319149,72.3404255319149,141,outputs/2026-04-13/scoring/asr_autodan_strong_reject.json
+Llama-3-8B-Instruct,FT (n=250),,training,220006.0,220006.0,0.06,6.0,250,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Llama-3-8B-Instruct,FT (n=all),,training,459655.0,459655.0,0.06,6.0,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+Llama-3-8B-Instruct,PGD,pgd,adversarial,1578136,1578136.0,0.9465875370919882,94.65875370919882,337,outputs/2026-04-13/scoring/asr_pgd_strong_reject.json
+Llama-3-8B-Instruct,PAIR,pair,adversarial,208000789260,208000789260.0,0.6751592356687898,67.51592356687898,157,outputs/2026-04-13/scoring/asr_pair_strong_reject.json
+SmolLM3-Safe,Baseline,,training,0.0,1.0,0.0787037037037037,7.87037037037037,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Safe,Roleplay,,training,233.0,233.0,0.055,5.5,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Safe,FT (n=10),,training,6718.0,6718.0,0.855,85.5,10,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Safe,FT (n=10),,training,6743.0,6743.0,0.7916666666666666,79.16666666666666,10,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Safe,FT (n=50),,training,32843.0,32843.0,0.895,89.5,50,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Safe,FT (n=50),,training,34629.0,34629.0,0.8055555555555556,80.55555555555556,50,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Safe,FT (n=100),,training,79578.0,79578.0,0.845,84.5,100,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Safe,GCG,gcg,adversarial,156720,156720.0,0.8829787234042553,88.29787234042553,94,outputs/2026-04-14/scoring/asr_gcg_strong_reject.json
+SmolLM3-Safe,FT (n=250),,training,182935.0,182935.0,0.91,91.0,250,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Safe,AutoDAN,autodan,adversarial,206774,206774.0,0.58,57.99999999999999,100,outputs/2026-04-14/scoring/asr_autodan_strong_reject.json
+SmolLM3-Safe,FT (n=all),,training,374981.0,374981.0,0.89,89.0,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Safe,PGD,pgd,adversarial,1578136,1578136.0,0.96,96.0,50,outputs/2026-04-14/scoring/asr_pgd_strong_reject.json
+SmolLM3-Safe,PAIR,pair,adversarial,208000789260,208000789260.0,0.9649122807017544,96.49122807017544,57,outputs/2026-04-14/scoring/asr_pair_strong_reject.json
+SmolLM3-Unsafe,Baseline,,training,0.0,1.0,0.7175925925925926,71.75925925925925,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Unsafe,Roleplay,,training,227.0,227.0,0.6759259259259259,67.5925925925926,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Unsafe,FT (n=10),,training,5905.0,5905.0,0.7546296296296297,75.46296296296296,10,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Unsafe,FT (n=50),,training,25005.0,25005.0,0.84,84.0,50,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Unsafe,FT (n=100),,training,49065.0,49065.0,0.87,87.0,100,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Unsafe,FT (n=250),,training,120154.0,120154.0,0.8842592592592593,88.42592592592592,250,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Unsafe,GCG,gcg,adversarial,156720,156720.0,0.8421052631578947,84.21052631578947,95,outputs/2026-04-14/scoring/asr_gcg_strong_reject.json
+SmolLM3-Unsafe,AutoDAN,autodan,adversarial,206774,206774.0,0.7457627118644068,74.57627118644068,59,outputs/2026-04-14/scoring/asr_autodan_strong_reject.json
+SmolLM3-Unsafe,FT (n=all),,training,252066.0,252066.0,0.915,91.5,1000000000,/home/mila/s/sarangis/AdversariaLLM/final-results.jsonl
+SmolLM3-Unsafe,PGD,pgd,adversarial,1578136,1578136.0,0.94,94.0,50,outputs/2026-04-14/scoring/asr_pgd_strong_reject.json
+SmolLM3-Unsafe,PAIR,pair,adversarial,208000789260,208000789260.0,0.9787234042553191,97.87234042553192,47,outputs/2026-04-14/scoring/asr_pair_strong_reject.json

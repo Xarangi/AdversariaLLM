@@ -1,0 +1,84 @@
+{
+  "global": {
+    "policy": "Include all modeled components; PAIR includes helper-model parameter bits; PGD includes soft-token embedding payload bits.",
+    "baseline_bits_plot_clamp": "0-bit methods are clamped to 1 bit for log-scale plotting only.",
+    "duplicate_selection": "Prefer larger completed_instances/sample coverage; ties broken by higher ASR.",
+    "ignored_attacks": [
+      "crescendo"
+    ]
+  },
+  "attacks": {
+    "gcg": {
+      "total_bits": 156720,
+      "components": {
+        "code_bits": 112400,
+        "payload_bits": 320,
+        "search_bits": 40000,
+        "meta_bits": 4000
+      },
+      "assumptions": {
+        "suffix_tokens": 20,
+        "token_id_bits": 16,
+        "code_bits_policy": "attack_class_only",
+        "search_formula": "num_steps * suffix_tokens * log2(topk)",
+        "num_steps": 250,
+        "topk": 256
+      }
+    },
+    "autodan": {
+      "total_bits": 206774,
+      "components": {
+        "code_bits": 88288,
+        "prefix_bits": 26838,
+        "evolution_bits": 89600,
+        "mutation_bits": 2048
+      },
+      "assumptions": {
+        "avg_initial_prefix_bits": 26838,
+        "initial_prefix_count": 128,
+        "code_bits_policy": "attack_class_only",
+        "num_steps": 100,
+        "batch_size": 128,
+        "mutation": 0.01,
+        "token_id_bits": 16,
+        "evolution_formula": "num_steps * batch_size * log2(batch_size)"
+      }
+    },
+    "pair": {
+      "total_bits": 208000789260,
+      "components": {
+        "code_bits": 43880,
+        "helper_model_bits": 208000000000,
+        "payload_bits": 737280,
+        "search_bits": 8100
+      },
+      "assumptions": {
+        "helper_model": "lmsys/vicuna-13b-v1.5",
+        "helper_model_params": 13000000000,
+        "helper_precision_bits": 16,
+        "code_bits_policy": "attack_class_only",
+        "num_steps": 3,
+        "num_streams": 30,
+        "max_new_tokens": 512,
+        "max_attempts": 10,
+        "token_id_bits": 16
+      }
+    },
+    "pgd": {
+      "total_bits": 1578136,
+      "components": {
+        "code_bits": 243416,
+        "soft_payload_bits": 1310720,
+        "state_bits": 24000
+      },
+      "assumptions": {
+        "soft_tokens": 20,
+        "embedding_dim_assumption": 4096,
+        "embedding_precision_bits": 16,
+        "code_bits_policy": "attack_class_only",
+        "num_steps": 100,
+        "state_formula": "num_steps * soft_tokens * log2(embedding_dim)"
+      }
+    }
+  }
+}
